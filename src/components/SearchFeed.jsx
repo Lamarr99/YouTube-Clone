@@ -4,7 +4,6 @@ import {Videos} from './'
 import { useParams } from 'react-router-dom'
 
 
-// this is used just so we can call this api immediately the feed loads
 import { fetchFromAPI } from '../utils/fetchFromAPI'
 
 const SearchFeed = () => {

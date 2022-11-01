@@ -7,14 +7,17 @@ import { demoVideoUrl,demoVideoTitle, demoChannelUrl, demoChannelTitle } from '.
 const VideoCard = ({video: {id: {videoId}, snippet  }}) => {
   return (
     <Card className=' ' sx={{
-        width: { xs:'160px',sm: '358px',md:'320px'}, boxShadow:'none' ,borderRadius:0 }} >
+        width: { xs:'100%',sm:'480px',md:'340px',lg:'300px'},cursor:'pointer',  boxShadow:'none' ,borderRadius:0 }} >
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl }>
-           <CardMedia
+           <CardMedia 
              alt={snippet?.title}
-             sx={{ width: {xs: '100%' ,sm: '358px',md:'320px'}, height: 180 }}
-             image={snippet?.thumbnails?.high?.url} />
+             sx={{ width: {xs: '100%'}, height: 200 }}
+             image={snippet?.thumbnails?.high?.url}  />
         </Link>
-             <CardContent sx={{ bgcolor:'#1e1e1e', height:'10rem' }}>
+             <CardContent sx={{ bgcolor:'#1e1e1e', height:{xs:'min-content', 
+             sm:'max-content',md:'6rem',lg:'8rem'},
+             display:'flex',flexDirection:'column',
+              justifyContent:'center',alignItems:'start'}}>
                  <Link to={videoId ? `/video/${videoId}` : demoVideoUrl }>
                     <Typography className='card-title' variant='subtitle1' color='#fff' sx={{
                   
