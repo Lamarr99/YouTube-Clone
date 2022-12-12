@@ -29,9 +29,9 @@ fetchFromAPI(`search?part=snippet&q=${selectedCategory}` )
   />
 
 <a href="https://github.com/Lamarr99" target='_blank'> 
-<Typography className='copyright' variant='body2' sx= {{
+<Typography className='copyright' variant='body2' px={2} sx= {{
   mt: 1.5, color: 'gray' }} >
-  Built by Tony Osijo
+  © Tony Osijo
   </Typography>
   </a>
 </Box>

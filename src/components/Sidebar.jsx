@@ -6,7 +6,7 @@ import { categories } from '../utils/constants'
 
 const Sidebar = ({selectedCategory, setSelectedCategory}) =>  (
 
-    <Stack className='' direction='row'
+    <Stack direction='row'
     sx={{
     overflow: 'auto',
     height: { sx: 'auto', md: '95%'  },

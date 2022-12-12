@@ -1,4 +1,4 @@
-import {useEffect,useState} from 'react'
+import React,{useEffect,useState} from 'react'
 import { Link,useParams } from 'react-router-dom'
 import ReactPlayer from 'react-player'
 import { Box, Stack, Typography } from '@mui/material'
@@ -39,29 +39,29 @@ const VideoDetail = () => {
             url={`https://youtube.com/watch?v=${id}`} 
             className='react-player' controls
              />
-             <Typography color="#fff" variant={{sm: 'subtitle1', md:'h5'}} px={2} fontWeight='bold' >
+             <Typography color="#fff" variant={{xs: 'subtitle1', md:'h5'}} display='block' py={1} px={2} fontWeight='bold'>
               {title}
              </Typography>
              <Stack  direction='row' justifyContent='space-between' sx={{
               color:'#fff'
              }} py={1} px={2} >
-               <Link to="/channel/${channelId}" >
-               <Typography variant={{sm: 'subtitle2', md:'h6'}} color='#fff'  >
+               <Link to={`/channel/${channelId}`} >
+               <Typography variant={{xs: 'subtitle2', md:'h6'}} color='#fff'  >
                 {channelTitle}
                 <CheckCircle sx={{
                   fontSize:'12px', color:'gray', ml:'5px'
                 }} />
                </Typography>
                </Link>
-               <Stack direction='row' gap='1rem' alignItems='center' >
+               <Stack direction='row' gap='1rem' alignItems='center' px={2} >
                 <Typography variant='body1' sx={{
-                  opacity:'0.7'
+                  opacity:'0.7', fontSize: {xs:'.9rem',md:'1rem'}
                 }} >
                   {parseInt(viewCount).toLocaleString()} views
                 </Typography>
 
                 <Typography variant='body1' sx={{
-                  opacity:'0.7'
+                  opacity:'0.7', fontSize: {xs:'.9rem',md:'1rem'}
                 }} >
                   {parseInt(likeCount).toLocaleString()} likes
                 </Typography>

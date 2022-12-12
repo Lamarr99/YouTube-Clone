@@ -7,8 +7,10 @@ import { demoProfilePicture } from '../utils/constants'
 const ChannelCard = ({channelDetail, marginTop}) => (
     <Box
       sx={{
-        display:'flex', alignItems:'center' , justifyContent:"center" ,
-        width: { xs:'356px', md:'320px'   } ,
+        display:'flex', 
+        alignItems:'center' , 
+        justifyContent:"center" ,
+        // width: { xs:'356px', md:'320px'} ,
         height:'326px', margin:'auto',
         boxShadow:'none', borderRadius:'1rem',
         marginTop
@@ -23,13 +25,15 @@ const ChannelCard = ({channelDetail, marginTop}) => (
                 borderRadius:'50%', height:'180px', width:'180px', mb:2, border:'.1rem solid #e3e3e3'}}
             />
                 <Typography variant='h6'>
-                    {channelDetail?.snippet?.title}
-                    <CheckCircle sx={{ fontSize:'.7rem', color:'gray', ml: '0.3rem'}} />
+                    {channelDetail?.snippet?.title}{' '}
+                    <CheckCircle sx={{ fontSize:'.8rem', color:'gray', ml: '0.3rem'}} />
                 </Typography>
                 
                 { channelDetail?.statistics?.subscriberCount && (
-                    <Typography>
-                        { parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString() }{' '} Subsribers
+                    <Typography variant='body2' sx={{
+                        color:'gray'
+                    }}>
+                        { parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString('en-US') }{' '} Subscribers
                     </Typography>)  }
         </CardContent>
         </Link>
