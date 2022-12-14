@@ -14,12 +14,12 @@ const Sidebar = ({selectedCategory, setSelectedCategory}) =>  (
     }}>
 
 { categories.map((category) =>  (
-    <button type='' className='category-btn'
+    <button 
+      type='' 
+      className='category-btn'
       onClick={() => setSelectedCategory(category.name) }
       style={{
-        background: category.name === selectedCategory &&
-          '#fc1503',
-        color: 'white'
+        background: category.name === selectedCategory &&  '#fc1503', color: 'white'
       }}
       key={category.name}
     >
